@@ -35,6 +35,13 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    title: 'projects',
+    pageTitle: 'Projects'
+  });
+});
+
 app.get('/bad', (req, res) => {
   res.send({error: 'Page not found!'});
 });
